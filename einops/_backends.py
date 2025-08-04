@@ -764,7 +764,7 @@ class MindSporeBackend(AbstractBackend):
         return x.broadcast_to(tuple(repeats))
 
     def reshape(self, x, shape):
-        return x.reshape(shape).stub_sync()
+        return x.reshape(shape)#.stub_sync()
 
     def tile(self, x, repeats):
         return x.tile(repeats)
